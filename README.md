@@ -75,7 +75,7 @@ The documentation includes detailed information about each API endpoint, sample 
 │   └── userRoutes.js
 ├── utils/
 │   └── jwtUtils.js
-├── app.js
+├── index.js
 ├── package.json
 └── README.md
 ```
@@ -85,7 +85,7 @@ The documentation includes detailed information about each API endpoint, sample 
 - `models/`: Contains the Mongoose models for database schema.
 - `routes/`: Contains the Express routes for handling different API endpoints.
 - `utils/`: Contains utility functions for generating and verifying JWT tokens.
-- `app.js`: The entry point of the application.
+- `index.js`: The entry point of the application.
 - `package.json`: Contains project dependencies and scripts.
 - `README.md`: This file.
 
