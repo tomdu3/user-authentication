@@ -39,10 +39,10 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { username = '', email = '', password} = req.body;
 
     // Check if the user exists
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ $or: [{ username }, { email }] });
     if (!user) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
