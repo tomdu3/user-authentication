@@ -46,8 +46,8 @@ The server will start running on `http://localhost:3000`.
 
 The API documentation is available in Postman. You can import the collection and environment from the provided files:
 
-- `postman_collection.json`
-- `postman_environment.json`
+- `REST_API_authentication_and_authorization.postman_collection.json`
+-  `Auth.postman_environment.json` and `Auth-deployed.postman_environment.json` (local and deployed environment respectively).
 
 The documentation includes detailed information about each API endpoint, sample requests, and expected responses.
 
