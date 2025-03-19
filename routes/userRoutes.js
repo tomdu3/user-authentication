@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const { verifyToken } = require('../utils/jwtUtils');
+const { verifyToken } = require('../middleware/jwtMiddleware');
 
 
 // Get user information
-router.get('/me', verifyToken, userController.getUserInfo);
+router.get('/info', verifyToken, userController.getUserInfo);
 
 module.exports = router;
