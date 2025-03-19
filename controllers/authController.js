@@ -29,8 +29,14 @@ const register = async (req, res) => {
     // Create a new user
     const newUser = new User({ username, email, password: hashedPassword });
     await newUser.save();
+    // get user details without password
+    const userDetails = newUser.toObject();
+    delete userDetails.password; 
 
-    res.status(201).json({ message: 'User registered successfully' });
+    res.status(201).json({
+      message: 'User registered successfully',
+      user: userDetails,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Internal server error' });
