@@ -4,6 +4,17 @@ const jwt = require('jsonwebtoken');
 
 const register = async (req, res) => {
   try {
+    // Check if the request body is valid
+    if (!req.body.username || !req.body.email || !req.body.password) {
+      // determine which is missing
+      let missingFields = [];
+      if (!req.body.username) missingFields.push("'username'");
+      if (!req.body.email) missingFields.push("'email'");
+      if (!req.body.password) missingFields.push("'password'");
+      missingFields = missingFields.join(', ');
+
+      return res.status(400).json({ message: `Required fields missing: ${missingFields}` });
+    }
     const { username, email, password } = req.body;
 
     // Check if the user already exists
