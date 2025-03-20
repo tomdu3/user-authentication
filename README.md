@@ -78,7 +78,7 @@ The REST API is deployed on Render [https://authenticate-authorize.onrender.com]
 ├── middleware/
 │   └── jwtMiddleware.js
 ├── models/
-│   └── User.js
+│   └── Users.js
 ├── routes/
 │   ├── authRoutes.js
 │   └── userRoutes.js
